@@ -18,24 +18,26 @@ int main()
 {
     menu();
 }
-void menu(){
+void menu()
+{
     int query;
     printf("\n1.add\t  2.remove\t 3.check \t 4.edit \n");
     printf("\nenter your query\n");
     scanf("%d",&query);
-    if(query==1){
+    switch(query){
+    case 1:
         add();
-    }
-    else if(query==2){
+        break();
+    case 2:
         erase();
-    }
-    else if(query==3){
+        break();
+    case 3:
         check();
-    }
-    else if(query==4){
+        break();
+    case 4:
         edit();
-    }
-    else{
+        break();
+    default:
         printf("undefined query , try again\n\n");
         menu();
     }
